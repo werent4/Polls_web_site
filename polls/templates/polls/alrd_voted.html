@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ question.question_text }}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'polls/style_ind.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'polls/img/favicon.ico' %}">
+</head>
+<body>
+     <div class="head">
+            <header>
+                <h1>Polls</h1>
+                <div class="headlinks">
+                    <nav>
+                        <p><a href="/about_us">About us</a></p>
+                        <p><a href="/">Home</a></p>
+                        <p><a href="/API">API</a></p>
+                    </nav>
+                </div>
+            </header>
+        </div>
+     <p>You have already voted for this poll.</p>
+    <button class="custom-btn-acpt-cncl btn-acpt-cncl" onclick="window.location.href='{% url 'polls:index'%}'"> Back to polls </button>
+</body>
+</html>

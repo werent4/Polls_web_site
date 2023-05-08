@@ -1,0 +1,258 @@
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background: #F8EFEF;
+}
+
+.head header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.head header {
+    height: 100px;
+    background: #EAE0E0;
+    color: #000000;
+    width: 100%;
+    text-decoration: none;
+}
+
+
+.head header{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    text-decoration: none;
+
+}
+
+
+.headlinks nav{
+    display: flex;
+    flex-direction: row;
+    text-indent: 54px;
+    font-weight: bold;
+
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+li a {
+    color: black;
+}
+
+/***************************************************************************************/
+.temperature{
+  position: fixed;
+  top: 15%;
+  right: 55%;
+}
+
+.temperature p{
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.code-box {
+  background-color: rgba(0,0,0,.5);
+      color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20%;
+  left: 55%;
+  height: 25%;
+  width: 30%;
+  overflow: auto;
+  border-top: 30px solid #282828;
+  animation-name: slide-in-top;
+  animation-duration: 1s;
+}
+
+.code-box pre {
+  font-family: monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  animation-name: slide-in-top;
+  animation-duration: 1s;
+}
+.code-box h2 {
+  position: fixed;
+  color: white;
+  font-family: monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  top: 19%;
+  animation-name: slide-in-top;
+  animation-duration: 1s;
+}
+
+.code-block {
+  color: #FFFFFF;
+  animation-name: slide-in-top;
+  animation-duration: 1s;
+}
+
+.copy-btn {
+  background-color: #1d1d1f;
+  color: #f1f1f1;
+  padding: 5px 10px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  animation-name: slide-in-top;
+  animation-duration: 1s;
+}
+
+/********************************************/
+#search-field {
+  position: relative;
+  margin: 0 auto;
+  width: 240px;
+}
+#search-field span {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+
+  box-sizing: border-box;
+  display: block;
+  transition: 0.5s;
+  width: 0;
+  position: relative;
+  z-index: 10;
+}
+#search-field input {
+  font-size: 18px;
+  width: 100%;
+  height: 38px;
+  line-height: 36px;
+  border: 0 none;
+  display: none;
+  outline: 0;
+}
+#search-field button {
+  display: none;
+  position: absolute;
+  background: #F8EFEF;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  border: 0 none;
+  border-left: 4px solid #444;
+  width: 45px;
+  height: 40px;
+}
+#search-field button:before,
+#search-field button:after {
+  position: absolute;
+  content: " ";
+  border: 3px solid #444;
+}
+#search-field button:before {
+  left: 6px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+#search-field button:after {
+  background: #444;
+  width: 8px;
+  height: 0;
+  left: 20px;
+  top: 24px;
+
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#search-field label {
+  cursor: pointer;
+  position: absolute;
+  font-size: 19px;
+  left: 64px;
+  top: 10px;
+  text-transform: uppercase;
+}
+#search-field label:before,
+#search-field label:after {
+  transition: 0.5s;
+  content: " ";
+  position: absolute;
+  border: 3px solid #444;
+}
+#search-field label:before {
+  left: 74px;
+  top: -7px;
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+#search-field label:after {
+  width: 10px;
+  height: 0;
+  left: 87px;
+  top: 12px;
+  background: #444;
+
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#show-search-field:checked + label:before,
+#show-search-field:checked + label:after {
+  left: 185px;
+  top: 10px;
+  width: 14px;
+
+  -webkit-transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+  -moz-transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+  transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+#show-search-field:checked + label:before {
+  height: 0;
+  background: #444;
+
+  border-radius: 0;
+  -webkit-border-radius: 0;
+
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#show-search-field:checked + label + span {
+  padding: 0 49px 0 10px;
+  width: 100%;
+  border: 4px solid #444;
+  height: 48px;
+}
+#show-search-field:checked + label + span input,
+#show-search-field:checked + label + span button {
+  display: block;
+}

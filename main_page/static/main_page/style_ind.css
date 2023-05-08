@@ -1,0 +1,158 @@
+body{
+    width: 100%;
+    height: 100%;
+
+    background: #F8EFEF;
+}
+.head header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head header {
+    height: 100px;
+    background: #EAE0E0;
+    color: #000000;
+    width: 100%;
+}
+
+
+.head header{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+.headlinks nav{
+    display: flex;
+    flex-direction: row;
+    text-indent: 54px;
+    font-weight: bold;
+}
+
+.register{
+    display: flex;
+    flex-direction: row;
+    text-indent: 30px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 35px;
+    right: 3%;
+}
+
+/*.sing_up{*/
+/*    position: absolute;*/
+/*    top: 6%;*/
+/*    */
+/*}*/
+/*.login{*/
+/*    position: absolute;*/
+/*    top: 6%;*/
+
+/*}*/
+
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainComponent{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+/*______________________*/
+
+.custom-btn-acpt-cncl {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+
+}
+.btn-acpt-cncl{
+  background: rgb(6,14,131);
+  /*background: #eca2e5;*/
+    color: black;
+    background: #EAE0E0;
+  border: none;
+
+}
+.btn-acpt-cncl:hover {
+   background: rgb(0,3,255);
+    color: white;
+   background: #6b0763;
+}
+/*_____________________________________________*/
+.custom-btn-sing-up{
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+
+}
+.btn-sing-up{
+  /*background: rgb(6,14,131);*/
+  /*!*background: #eca2e5;*!*/
+  /*  color: black;*/
+  /*  background: #EAE0E0;*/
+  border: none;
+
+       background: rgb(0,3,255);
+    color: white;
+   background: #6b0763;
+}
+.btn-sing-up:hover {
+      background: rgb(6,14,131);
+  /*background: #eca2e5;*/
+    color: black;
+    background: #EAE0E0;
+  border: none;
+
+   /*background: rgb(0,3,255);*/
+   /* color: white;*/
+   /*background: #6b0763;*/
+}
+
+
+

@@ -1,0 +1,7 @@
+{% extends 'register_tampl.html' %}
+
+{% block account %}
+    {% for v in vote %}
+    <p>{{ v }}</p>
+    {% endfor %}
+{% endblock %}

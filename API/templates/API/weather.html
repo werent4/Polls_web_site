@@ -1,0 +1,34 @@
+{% extends 'API/index_templ.html' %}
+
+{% block weatherAPI %}
+    {% load static %}
+        <script src="{% static 'API/copy.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'API/style_ind.css'%}">
+
+    <form id="search-field" action="{% url 'API:weather' %}">
+      <input type="checkbox" id="show-search-field" />
+      <label for="show-search-field"><span>Kiev</span></label>
+      <span>
+        <input type="text" id="site" name="site" placeholder="Write city name" />
+        <button type="submit" form="search-field" title="Submit">&nbsp;</button>
+      </span>
+    </form>
+
+    <div class="temperature">
+        <p>{{ temperature }}</p>
+        {% if evaluation == 'Hot'%}
+            <img src="{% static 'API/img/hot.png' %}">
+        {% elif evaluation == 'Normal' %}
+            <img src="{% static 'API/img/normal.png' %}">
+        {% elif evaluation == 'Unknown' %}
+            <img src="{% static 'API/img/error.png' %}">
+        {% else %}
+            <img src="{% static 'API/img/cold.png' %}">
+        {% endif %}
+    </div>
+    <div id = "div1"class="code-box">
+      <h2>Info taken from openweathermap.org</h2>
+      <pre><code id="shit" class="code-block">the data is: {{data_text}}</code></pre>
+          <button onclick="CopyToClipboard(document.getElementById('shit'))" class="copy-btn">Copy</button>
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if request.user.is_authenticated %}
+        <title>Account of user: {{ user.username }}</title>
+        {% else %}
+            <title>Polls</title>
+    {% endif %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/style_ind.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'users/img/favicon.ico' %}">
+</head>
+<body>
+    <div class="mainComponent">
+
+        <div class="head">
+            <header>
+                <h1><a href="/">Home</a></h1>
+                <div class="headlinks">
+                    <nav>
+                        <p><a href="/about_us">About us</a></p>
+                        <p><a href="/polls">Polls</a></p>
+                        <p><a href="/API">API</a></p>
+                    </nav>
+                </div>
+            </header>
+
+        </div>
+            {% if request.user.is_authenticated %}
+                    {% block account %}{% endblock %}
+                {% else %}
+                    {% block logout %}{% endblock %}
+                    {% block content %}{% endblock %}
+                    {% block singup %}{% endblock %}
+                    {% block register%}{% endblock %}
+
+{#                    <div class="register">#}
+{#                        <p><a href="/user/singup">Sing Up</a></p>#}
+{#                    </div>#}
+            {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'register_tampl.html' %}
+
+
+
+{% block register%}
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'users/sryle_register.css'%}">
+    <p>
+    This Privacy Policy describes how we collect, use and process your data when you use our Site. By using the Site, you agree to the collection and use of information subject to this Privacy Policy.
+
+    Please note that this Privacy Policy applies only to this Site. This Site may contain links to other sites not used or controlled by us. Links provided on this Site do not imply that we endorse or have reviewed such third party sites.
+
+    The data protection policy has been prepared in accordance with the following legal acts
+
+    Regulation (EU) of the European Parliament and of the Council of 27 April 2016 2016/679 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (hereinafter - BDAR);
+    the Law of the Republic of Lithuania on the Legal Protection of Personal Data (hereinafter ADTAĮ);
+    The Law of the Republic of Lithuania on Electronic Communications (hereinafter - ERĮ).
+    </p>
+    <div class="confirmation">
+        <a href="{% url 'users:singup' %}"><button class="custom-btn-acpt-cncl btn-acpt-cncl">Accept</button></a>
+        <a href="{% url 'main_page:index' %}"><button class="custom-btn-acpt-cncl btn-acpt-cncl">Cancel</button></a>
+    </div>
+{% endblock %}

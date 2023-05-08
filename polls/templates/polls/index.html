@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polls</title>
+    {% load static%}
+    <script src="{% static 'polls/sort.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'polls/style_ind.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'polls/img/favicon.ico' %}">
+</head>
+<body>
+     <div class="head">
+            <header>
+                <h1>Polls</h1>
+                <div class="headlinks">
+                    <nav>
+                        <p><a href="/about_us">About us</a></p>
+                        <p><a href="/">Home</a></p>
+                        <p><a href="/API">API</a></p>
+                    </nav>
+                </div>
+            </header>
+        </div>
+     <div class="content">
+
+{#    <div class="container" onclick="burgerMenu(this)">#}
+{#      <div class="bar1">#}
+{#          <button class="hidden_btn" id="sort-button">Order by date</button><script src="{% static 'polls/sort.js' %}"></script>#}
+{#      </div>#}
+{#      <div class="bar2"></div>#}
+{#      <div class="bar3"></div>#}
+{#    </div>#}
+     <div class="container" onclick="toggleSortButton(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+
+
+     {% if quest_order %}
+         <p>{{ quest_order }}</p>
+     {% else %}
+         <p>{{ quest_order }}</p>
+     {% endif %}
+    {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+                <li><a href="{% url 'polls:detail' question.id%}">{{question.question_text}}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls for now</p>
+    {% endif %}
+
+    </div>
+</body>
+</html>

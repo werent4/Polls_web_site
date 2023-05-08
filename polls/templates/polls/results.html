@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ question.question_text }}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'polls/style_results.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'polls/img/favicon.ico' %}">
+
+</head>
+<body>
+
+        <div class="head">
+            <header>
+                <h1><a href="/">Home</a></h1>
+                <div class="headlinks">
+                    <nav>
+                        <p><a href="/about_us">About us</a></p>
+                        <p><a href="/polls">Polls</a></p>
+                        <p><a href="/API">API</a></p>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class = "votes_res">
+          <ul>
+            <h1>{{ question.question_text }}</h1>
+            {% for choice in question.choice_set.all %}
+              <p>For {{choice.choice_text}} - {{ choice.votes }} vote{{choice.votes| pluralize }}</p>
+            {% endfor %}
+          </ul>
+{#            <a href="{% url 'polls:index' %}"><button class="custom-btn-acpt-cncl btn-acpt-cncl"> Vote again? </button></a>#}
+            <button class="custom-btn-acpt-cncl btn-acpt-cncl" onclick="window.location.href='{% url 'polls:index'%}'"> Back to polls </button>
+
+        </div>
+
+</body>
+</html>

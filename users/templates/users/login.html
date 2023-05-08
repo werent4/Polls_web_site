@@ -1,0 +1,29 @@
+{% extends 'register_tampl.html' %}
+
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/style_login_sing.css'%}">
+    <link rel="stylesheet" href="{% static 'users/google_btn.css'%}">
+<div class="box">
+    <h4 class="form-header">Log in</h4>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+
+        {{ form }}
+
+        <button type="submit" class="custom-btn-acpt-cncl btn-acpt-cncl">Log in</button>
+    </form>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+    <div class="google-btn">
+        <a href="{% url "user:social:begin" "google-oauth2" %}">
+      <div class="google-icon-wrapper">
+        <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+      </div>
+        <p class="btn-text"><b>Log in with google</b></p></a>
+    </div>
+</div>
+{% endblock %}

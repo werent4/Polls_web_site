@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Polls</title>
+    <link rel="stylesheet" href="{% static 'API/style_ind.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'API/img/favicon.ico' %}">
+</head>
+<body>
+    <div class="mainComponent">
+
+        <div class="head">
+            <header>
+                <h1>Home</h1>
+                <div class="headlinks">
+                    <nav>
+                        <p><a href="/about_us">About us</a></p>
+                        <p><a href="/polls">Polls</a></p>
+                        <p><a href="/API">API</a></p>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        {% block index %}{% endblock %}
+        {% block weatherAPI %}{% endblock %}
+    </div>
+</body>
+</html>

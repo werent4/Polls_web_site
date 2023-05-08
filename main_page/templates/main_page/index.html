@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Polls</title>
+    <link rel="stylesheet" href="{% static 'main_page/style_ind.css'%}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'main_page/img/favicon.ico' %}">
+</head>
+<body>
+    <div class="mainComponent">
+
+        <div class="head">
+            <header>
+                <h1>Home</h1>
+                <div class="headlinks">
+                    <nav>
+                        <p><a href="/about_us">About us</a></p>
+                        <p><a href="/polls">Polls</a></p>
+                        <p><a href="/API">API</a></p>
+                    </nav>
+                </div>
+                    {% if request.user.is_authenticated %}
+                        <div class="register">
+                            <p>Welcome <a href="{% url 'users:account' %}">{{ user.username }}</a></p>
+                            <a href="{% url 'users:logout' %}"><button class="custom-btn-acpt-cncl btn-acpt-cncl"> Log out</button></a>
+                        </div>
+                    {% else %}
+                    <div class="register">
+                        <div class="login">
+                            <a href="{% url 'user:login' %}"><button class="custom-btn-acpt-cncl btn-acpt-cncl"> Log in </button></a>
+                        </div>
+                        <div class="sing_up">
+                            <a href="{% url 'users:index' %}"><button class="custom-btn-sing-up btn-sing-up"> Sing up </button></a>
+                        </div>
+                    </div>
+                    {% endif %}
+            </header>
+
+        </div>
+        <div class="wrapper">
+            <a href="/polls"><button class="custom-btn-acpt-cncl btn-acpt-cncl">Polls</button></a>
+        </div>
+    </div>
+</body>
+</html>
