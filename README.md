@@ -1,6 +1,6 @@
 # Polls_web_site
 
-## Directory Structure
+## <a href = "https://github.com/werent4/Polls_web_site/tree/main">Directory Structure</a>
 
      /polls_site/: This is the root directory of the Django project.
          /API/: This directory contains files related to the API of the project.
