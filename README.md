@@ -23,7 +23,7 @@
 ## How to use documentation
 
 Each folder in directory <a href = "https://github.com/werent4/Polls_web_site/tree/main/documentation">documentation/</a> contains documentation for the corresponding (named) application on the site.
-In directory documentation/prototype you can find prototype of the site in .pdf or open it with figma.
+In directory <a href = "https://github.com/werent4/Polls_web_site/tree/main/documentation/prototype">documentation/prototype</a> you can find prototype of the site in .pdf or open it with figma.
 
 ### Libraries used to write the app:
     
