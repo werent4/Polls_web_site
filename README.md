@@ -2,7 +2,7 @@
 
 ## Directory Structure
 
-    - polls_site: This is the root directory of the Django project.
+    - polls_site/: This is the root directory of the Django project.
     - API/: This directory contains files related to the API of the project.
     - documentation/: This directory contains documentation files related to the project.
     - main_page/: This directory contains files related to the main page of the project.
