@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7mwb*%nf!5#430f512=+x$rk0q$vl-saw6an9c!m4!((c5(x&i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '127.0.0.1' ]
+ALLOWED_HOSTS = [ ]
 
 
 # Application definition
@@ -60,8 +60,8 @@ LOGIN_REDIRECT_URL ="/"
 
 LOGOUT_URL = reverse_lazy("users:logout")
 #### new
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '858694289298-vrchpstaf4kjg8u8ifvti8tfbrogr2nj.apps.googleusercontent.com' # Google Consumer Key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Google Consumer Secret
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '758394189228-vrchpstaf4kjg8u8ifvti8tfbr2ogr2nj.apps.googleusercontent.com' # Google Consumer Key is wrong for safety
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Google Consumer Secret Key is wrong for safety
 SOCIAL_AUTH_URL_NAMESPACE = 'users:social'
 
 AUTHENTICATION_BACKENDS = (
@@ -118,10 +118,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         #'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'db',
-        'USER': 'root',
-        'PASSWORD': 'Lbvrf2003root!nw',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'USER': 'Changed for safety',
+        'PASSWORD': 'Changed for safety',
+        'HOST':'Changed for safety',
+        'PORT':'Changed for safety',
     }
 }
 
