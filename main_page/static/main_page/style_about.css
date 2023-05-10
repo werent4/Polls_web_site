@@ -71,3 +71,12 @@ a:hover {
     top: 70%;
     right: 40%;
 }
+.git{
+    color: #13323a;
+}
+
+.git:hover{
+    text-decoration: underline;
+    font-size: 23px;
+    color: #2e7483;
+}
