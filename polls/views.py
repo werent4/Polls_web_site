@@ -11,15 +11,9 @@ from .utils import has_voted
 @login_required
 def index(request):
     order_by = request.GET.get('order_by', '-pub_date')
-    if order_by == '-pub_date':
-        quest_order = 'Questions ordered from newest to latest'
-    else:
-        quest_order = 'Questions ordered from latest to newest'
-
-    latest_question_list = Question.objects.order_by(order_by)[:5]
+    latest_question_list = Question.objects.order_by(order_by)[:]
     context = {
         'latest_question_list': latest_question_list,
-        'quest_order' : quest_order
     }
     return render(request, 'polls/index.html', context)
 @login_required
