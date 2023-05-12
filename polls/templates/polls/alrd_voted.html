@@ -20,7 +20,15 @@
                 </div>
             </header>
         </div>
-     <p>You have already voted for this poll.</p>
-    <button class="custom-btn-acpt-cncl btn-acpt-cncl" onclick="window.location.href='{% url 'polls:index'%}'"> Back to polls </button>
+     <div class="votes">
+        <h>You have already voted for this poll.</h>
+     </div>
+     <div class="mainComponent">
+         <form method="POST" action="{% url 'polls:remove_vote' question.id %}">
+            {% csrf_token %}
+            <button class="custom-btn-acpt-cncl btn-acpt-cncl" type="submit"> Remove Vote </button>
+        </form>
+        <button class="custom-btn-acpt-cncl btn-acpt-cncl" onclick="window.location.href='{% url 'polls:index'%}'"> Back to polls </button>
+     </div>
 </body>
 </html>

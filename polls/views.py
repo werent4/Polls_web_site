@@ -41,7 +41,7 @@ def vote(request, question_id):
         'error_messege': 'You didnt select a choice.'
     }
 
-    # Проверяем, что пользователь еще не голосовал в текущем опросе
+    # If user doesnt vote in poll
     if Vote.objects.filter(user=request.user, question=question).exists():
         return render(request, 'polls/alrd_voted.html', {'question': question})
 
@@ -58,3 +58,21 @@ def vote(request, question_id):
         vote.save()
 
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+@login_required
+def remove_vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+
+    # Find the vote made by the user for the current question
+    try:
+        vote = Vote.objects.get(user=request.user, question=question)
+    except Vote.DoesNotExist:
+        return HttpResponse('You have not voted in this poll.')
+
+    # Remove the vote and update the choice count
+    choice = vote.choice
+    choice.votes -= 1
+    choice.save()
+    vote.delete()
+
+    return HttpResponseRedirect(reverse('polls:detail', args=(question.id,)))
