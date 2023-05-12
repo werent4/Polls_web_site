@@ -6,6 +6,7 @@
     <title>Polls</title>
     <link rel="stylesheet" href="{% static 'main_page/style_ind.css'%}">
     <link rel="shortcut icon" type="image/png" href="{% static 'main_page/img/favicon.ico' %}">
+    <script src="{% static 'main_page/check.js'%}"></script>
 </head>
 <body>
     <div class="mainComponent">
@@ -20,6 +21,11 @@
                         <p><a href="/API">API</a></p>
                     </nav>
                 </div>
+{#                   <div class="container" onclick="toggleSortButton(this)">#}
+{#                      <div class="bar1"></div>#}
+{#                      <div class="bar2"></div>#}
+{#                      <div class="bar3"></div>#}
+{#                   </div>#}
                     {% if request.user.is_authenticated %}
                         <div class="register">
                             <p>Welcome <a href="{% url 'users:account' %}">{{ user.username }}</a></p>
@@ -41,6 +47,7 @@
         <div class="wrapper">
             <a href="/polls"><button class="custom-btn-acpt-cncl btn-acpt-cncl">Polls</button></a>
         </div>
+         <button id="Check-browser" class="custom-btn-acpt-cncl btn-acpt-cncl">Check your browser</button>
     </div>
 </body>
 </html>

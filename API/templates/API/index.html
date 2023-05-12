@@ -1,5 +1,7 @@
 {% extends 'API/index_templ.html' %}
 
+{% load static %}
+
 {% block index %}
-<p><a href="{% url 'API:weather' %}">Weather API integration</a></p>
+<button class="custom-btn-acpt-cncl btn-acpt-cncl" onclick="window.location.href='{% url 'API:weather' %}'"> Chek weather in any city </button>
 {% endblock %}
