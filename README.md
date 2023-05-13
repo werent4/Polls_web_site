@@ -33,4 +33,6 @@ In directory <a href = "https://github.com/werent4/Polls_web_site/tree/main/docu
     - requests (pip install requests)
     - social-auth-core (pip install social-auth-core)
     - django-allauth (pip install django-allauth)
+    - mysql-connector (pip install mysql-connector-python)
+    - mysqlclientpip install (mysqlclient)
 
